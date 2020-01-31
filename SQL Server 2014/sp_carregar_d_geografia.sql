@@ -4,7 +4,7 @@ create procedure dbo.sp_carregar_d_geografia as
 	declare @tabela 		as nvarchar(20)
 
 	set @origemdados 		= 'arquivo de vendas'
-	set @tabela 			= 'd_grupogeografico, d_pais, d_regiaovendas'
+	set @tabela 			= upper('d_grupogeografico, d_pais, d_regiaovendas')
 
 	begin try
 		-- apagar registros
@@ -81,7 +81,7 @@ create procedure dbo.sp_carregar_d_geografia as
 
 		-- gravar log
 		insert into dbo.adm_log 
-			values(newid(), getdate(), 'importa geografia', 's', 'carga ' + @tabela + ' com sucesso')						
+			values(newid(), getdate(), 'importa geografia', upper('s'), 'carga ' + @tabela + ' com sucesso')						
 	--
 	end try
 	--
@@ -92,6 +92,6 @@ create procedure dbo.sp_carregar_d_geografia as
 		
 		-- gravar log
 		insert into dbo.adm_log 
-			values(newid(), getdate(), 'importa geografia', 'f', 'erro ao carregar ' + @tabela)
+			values(newid(), getdate(), 'importa geografia', upper('f'), 'erro ao carregar ' + @tabela)
 	--
 	end catch

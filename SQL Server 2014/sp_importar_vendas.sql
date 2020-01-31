@@ -20,7 +20,7 @@ create procedure dbo.sp_importar_vendas as
 
 	-- gravar log
 	insert into dbo.adm_log 
-		values(newid(), getdate(), 'importa massadados.rpt', 's', 'arquivo importado com sucesso')
+		values(newid(), getdate(), 'importa massadados.rpt', upper('s'), 'arquivo importado com sucesso')
 
 	-- copiar arquivo para histórico
 	declare @nomearquivo varchar(50)

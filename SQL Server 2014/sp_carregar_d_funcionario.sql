@@ -4,7 +4,7 @@ create procedure dbo.sp_carregar_d_funcionario as
 	declare @tabela 		as nvarchar(20)
 
 	set @origemdados 		= 'arquivo de vendas'
-	set @tabela 			= 'd_funcionario'
+	set @tabela 			= upper('d_funcionario')
 
 	begin try
 		-- apagar registros
@@ -22,7 +22,7 @@ create procedure dbo.sp_carregar_d_funcionario as
 
 		-- inserir registros no dw
 		insert into dw..d_funcionario
-			select distinct
+			select
 			ds.nome,
 			ds.login,
 			ds.id_chefe,
@@ -88,7 +88,7 @@ create procedure dbo.sp_carregar_d_funcionario as
 
 		-- gravar log
 		insert into dbo.adm_log 
-			values(newid(), getdate(), 'importa funcionario', 's', 'carga ' + @tabela + ' com sucesso')						
+			values(newid(), getdate(), 'importa funcionario', upper('s'), 'carga ' + @tabela + ' com sucesso')						
 	--
 	end try
 	--
@@ -99,6 +99,6 @@ create procedure dbo.sp_carregar_d_funcionario as
 
 		-- gravar log
 		insert into dbo.adm_log 
-			values(newid(), getdate(), 'importa funcionario', 'f', 'erro ao carregar ' + @tabela)
+			values(newid(), getdate(), 'importa funcionario', upper('f'), 'erro ao carregar ' + @tabela)
 	--
 	end catch

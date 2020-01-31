@@ -4,7 +4,7 @@ create procedure dbo.sp_carregar_d_data as
 	declare @tabela 		as nvarchar(20)
 
 	set @origemdados 		= 'arquivo de vendas'
-	set @tabela 			= 'd_data'
+	set @tabela 			= upper('d_data')
 
 	begin try
 		-- apagar registros
@@ -28,7 +28,7 @@ create procedure dbo.sp_carregar_d_data as
 
 		-- gravar log
 		insert into dbo.adm_log 
-			values(newid(), getdate(), 'importa data', 's', 'carga ' + @tabela + ' com sucesso')									
+			values(newid(), getdate(), 'importa data', upper('s'), 'carga ' + @tabela + ' com sucesso')									
 	--
 	end try
 	--
@@ -39,6 +39,6 @@ create procedure dbo.sp_carregar_d_data as
 		
 		-- gravar log
 		insert into dbo.adm_log 
-			values(newid(), getdate(), 'importa data', 'f', 'erro ao carregar ' + @tabela)			
+			values(newid(), getdate(), 'importa data', upper('f'), 'erro ao carregar ' + @tabela)			
 	--
 	end catch
