@@ -1,0 +1,1 @@
+sqlcmd -S "PC-MARCELO\BIPRD" -U "BI_User" -P "P@ssw0rd" -Q "exec DS..sp_workflow_vendas"
