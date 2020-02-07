@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:TalendMetadata="http://www.talend.org/metadata/connection/2010" xmlns:orgomg.cwm.resource.record="http:///orgomg/cwm/resource/record.ecore">
+  <TalendMetadata:DelimitedFileConnection xmi:id="_0VdrYDuTEeqpZ9W3tFNAfQ" name="cargo_metadado" dataPackage="_0VdrYTuTEeqpZ9W3tFNAfQ" Server="Localhost 127.0.0.1" FilePath="C:/fonte_talend/FolhaPagamento/Cargo.csv" Encoding="ISO-8859-1" FieldSeparatorValue="&quot;;&quot;" RowSeparatorValue="&quot;\n&quot;" UseHeader="true" HeaderValue="1" FirstLineCaption="true"/>
+  <orgomg.cwm.resource.record:RecordFile xmi:id="_0VdrYTuTEeqpZ9W3tFNAfQ" name="default" dataManager="_0VdrYDuTEeqpZ9W3tFNAfQ">
+    <ownedElement xsi:type="TalendMetadata:MetadataTable" xmi:id="_0VdrYjuTEeqpZ9W3tFNAfQ" id="_v2ciYDuTEeqpZ9W3tFNAfQ" label="cargo_metadado">
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_0VdrYzuTEeqpZ9W3tFNAfQ" label="Codigo" length="10" talendType="id_String" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_0VdrZDuTEeqpZ9W3tFNAfQ" label="Cargo" length="40" talendType="id_String" pattern="&quot;dd-MM-yyyy&quot;"/>
+    </ownedElement>
+  </orgomg.cwm.resource.record:RecordFile>
+</xmi:XMI>

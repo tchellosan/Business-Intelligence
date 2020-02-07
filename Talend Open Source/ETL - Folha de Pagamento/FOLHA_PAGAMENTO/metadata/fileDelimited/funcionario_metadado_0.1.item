@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:TalendMetadata="http://www.talend.org/metadata/connection/2010" xmlns:orgomg.cwm.resource.record="http:///orgomg/cwm/resource/record.ecore">
+  <TalendMetadata:DelimitedFileConnection xmi:id="_rEX6gTuTEeqpZ9W3tFNAfQ" name="funcionario_metadado" dataPackage="_rEX6gjuTEeqpZ9W3tFNAfQ" Server="Localhost 127.0.0.1" FilePath="C:/fonte_talend/FolhaPagamento/Funcionario.csv" Encoding="ISO-8859-1" FieldSeparatorValue="&quot;;&quot;" RowSeparatorValue="&quot;\n&quot;" UseHeader="true" HeaderValue="1" FirstLineCaption="true"/>
+  <orgomg.cwm.resource.record:RecordFile xmi:id="_rEX6gjuTEeqpZ9W3tFNAfQ" name="default" dataManager="_rEX6gTuTEeqpZ9W3tFNAfQ">
+    <ownedElement xsi:type="TalendMetadata:MetadataTable" xmi:id="_rEX6gzuTEeqpZ9W3tFNAfQ" id="_lw6c0DuTEeqpZ9W3tFNAfQ" label="funcionario_metadado">
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_rEX6hDuTEeqpZ9W3tFNAfQ" label="Codigo" length="10" talendType="id_String" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_rEX6hTuTEeqpZ9W3tFNAfQ" label="Sobrenome" length="40" talendType="id_String" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_rEX6hjuTEeqpZ9W3tFNAfQ" label="Nome" length="20" talendType="id_String" pattern="&quot;dd-MM-yyyy&quot;"/>
+    </ownedElement>
+  </orgomg.cwm.resource.record:RecordFile>
+</xmi:XMI>
